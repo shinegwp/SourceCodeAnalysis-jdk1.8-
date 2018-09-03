@@ -81,7 +81,7 @@ static class Node<K,V> implements Map.Entry<K,V> {
         this.loadFactor = loadFactor;
         this.threshold = tableSizeFor(initialCapacity);//记录下次扩容的数量
     }
-    static final int tableSizeFor(int cap) {//将值变为最接近的它的2的n次方的数
+    static final int tableSizeFor(int cap) {//将值变为大于等于它的最小的2的指数
         int n = cap - 1;
         n |= n >>> 1;
         n |= n >>> 2;
